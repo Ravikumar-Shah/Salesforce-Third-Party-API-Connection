@@ -1,19 +1,17 @@
-# Salesforce DX Project: Next Steps
+# Salesforce-Third-Party-API-Integration Demo Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A demo project: demonstrates integration between Salesforce and 3rd party COVID-19 data provider.
 
-## How Do You Plan to Deploy Your Changes?
+## Concepts Covered
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+  - Component lifecycle  
+  - Third party API connection  
+  - Looping  
+  - Searching/Filtering  
+  - Tables  
+  - SLDS inbuilt CSS  
+  - Custom CSS  
+  - Event handlers  
+  - getters
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
-# Salesforce-Third-Party-API-Integration
