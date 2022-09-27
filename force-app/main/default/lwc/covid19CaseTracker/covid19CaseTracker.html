@@ -1,0 +1,78 @@
+
+<template>    
+    <header>Covid-19 Global Case Tracker</header>
+    <div class="slds-m-top_large slds-p-left_small slds-p-right_small slds-grid slds-gutters slds-wrap space">
+        <div class="slds-col bg-primary slds-p-around_small slds-m-around_small">
+            <div class="slds-text-align_center slds-text-heading_medium white-color">Total Confirmed</div>
+            <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_confirmed}</div>
+        </div>
+        <div class="slds-col bg-warning slds-p-around_small slds-m-around_small">
+             <div class="slds-text-align_center slds-text-heading_medium white-color">Total Active</div>
+             <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_active}</div>
+        </div>
+        <div class="slds-col bg-success slds-p-around_small slds-m-around_small">
+            <div class="slds-text-align_center slds-text-heading_medium white-color">Total Recovered</div>
+            <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_recovered}</div>
+        </div>
+        <div class="slds-col bg-danger slds-p-around_small slds-m-around_small">
+            <div class="slds-text-align_center slds-text-heading_medium white-color">Total Deaths</div>
+            <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_deaths}</div>
+        </div>
+        <div class="slds-col bg-info slds-p-around_small slds-m-around_small">
+            <div class="slds-text-align_center slds-text-heading_medium white-color">Fatality Rate</div>
+            <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_fatality_rate}</div>
+        </div>
+        <div class="slds-col bg-secondary slds-p-around_small slds-m-around_small">
+            <div class="slds-text-align_center slds-text-heading_medium white-color">Recovery Rate</div>
+            <div class="slds-text-align_center slds-text-heading_large white-color">{total.total_recovery_rate}</div>
+        </div>
+    </div>
+    <!--Header (after total tiles) with toggle -->
+    <div class="slds-m-left_small slds-m-right_small">
+        <div class="slds-p-around_medium lgc-bg">
+            <div class="box-container">
+                <h1>COVID Data by country</h1>
+            </div>            
+        </div>
+        <!--Table/List View -->
+        <template if:true={showListView} >
+            <div>
+                <div class="slds-var-p-around_medium lgc-bg">
+                    <label class="label-text">Enter Your country Name</label>
+                    <lightning-input  type="text" autocomplete="off" label="Enter Your country Name" variant="label-hidden" onkeyup={searchHandler}></lightning-input>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Country Name</th>
+                        <th>Confirmed</th>
+                        <th>Active</th>
+                        <th>Recovered</th>
+                        <th>Deaths</th>
+                        <th>Fatality Rate</th>
+                        <th>Recovery Rate</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each = {filteredTableData} for:item = "item">
+                        <tr key={item.Country_Region}>
+                            <td class="countryName">{item.Country_Region}</td>
+                            <td>{item.Confirmed}</td>
+                            <td>{item.Active}</td>
+                            <td>{item.Recovered}</td>
+                            <td>{item.Deaths}</td>
+                            <td>{item.Fatality_rate}</td>
+                            <td>{item.Recovery_rate}</td>
+                            <td>{item.formatedDate}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>            
+        </template>
+        
+    </div>
+    
+
+</template>
