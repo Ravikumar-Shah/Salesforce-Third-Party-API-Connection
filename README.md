@@ -1,6 +1,6 @@
-# Salesforce-Third-Party-API-Integration Demo Project
+# Salesforce-Third-Party-API-Connection Demo Project
 
-A demo project: demonstrates integration between Salesforce and 3rd party COVID-19 data provider.
+A demo project: demonstrates how to connect Salesforce to 3rd party COVID-19 data provider.
 
 ## Concepts Covered
 
